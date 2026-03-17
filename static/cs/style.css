@@ -1,0 +1,160 @@
+:root {
+    --vinho: #630d16;
+    --creme: #fdfaf5;
+    --verde-escuro: #1b3022;
+    --dourado: #c5a059;
+    --texto: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--creme);
+    color: var(--texto);
+    font-family: 'Georgia', serif;
+}
+
+/* header do site das pizzaria melhor da paraiba */
+header {
+    background: var(--vinho);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: 0.4s;
+}
+
+header.rolagem {
+    padding: 0.5rem 5%;
+    background: rgba(99, 13, 22, 0.95);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+#btn-contato {
+    background: var(--dourado);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* hero */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../img/background.png');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* fica um abaixo do outro */
+    align-items: center;    /* fica centralizado em horizontal */
+    justify-content: center; /* centraliza verticalmente */
+    gap: 20px;              /* CRUCIAL: Cria um espaço fixo de 20px entre o texto e o botão */
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem; /* espaço extra pro titulo */
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem; /* nao encoste no botao (la ele) */
+    max-width: 600px;      /* evita que o texto fique muito largo */
+}
+
+.hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+
+.btn-cta {
+    background: var(--vinho);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-cta:hover { background: var(--dourado); }
+
+/* grid */
+.container { padding: 5rem 5%; }
+.section-title { text-align: center; color: var(--vinho); margin-bottom: 3rem; font-size: 2.5rem; }
+
+.grid-pizzas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-pizza {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card-pizza:hover { transform: translateY(-10px); }
+
+.card-pizza img { width: 100%; height: 200px; object-fit: cover; }
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--verde-escuro);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border-radius: 3px;
+}
+
+.info { padding: 20px; }
+.info h3 { margin-bottom: 10px; color: var(--vinho); }
+.preco { display: block; font-size: 1.2rem; color: var(--verde-escuro); font-weight: bold; margin: 15px 0; }
+
+.btn-buy {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--vinho);
+    background: transparent;
+    color: var(--vinho);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-buy:hover { background: var(--vinho); color: white; }
+
+footer { background: #1a1a1a; color: #888; text-align: center; padding: 3rem; }
