@@ -89,7 +89,7 @@ nav a {
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem; /* nao encoste no botao (la ele) */
+    margin-bottom: 1.5rem; /* nao encoste no botao*/
     max-width: 600px;      /* evita que o texto fique muito largo */
 }
 
