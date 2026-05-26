@@ -19,7 +19,6 @@ body {
     font-family: 'Georgia', serif;
 }
 
-/* header do site das pizzaria melhor da paraiba */
 header {
     background: var(--vinho);
     color: white;
@@ -56,7 +55,6 @@ nav a {
     font-weight: bold;
 }
 
-/* hero */
 .hero {
     height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -77,7 +75,7 @@ nav a {
     flex-direction: column; /* fica um abaixo do outro */
     align-items: center;    /* fica centralizado em horizontal */
     justify-content: center; /* centraliza verticalmente */
-    gap: 20px;              /* CRUCIAL: Cria um espaço fixo de 20px entre o texto e o botão */
+    gap: 20px;              /* cria um espaço fixo de 20px entre o texto e o botão */
     padding: 20px;
 }
 
